@@ -1,7 +1,6 @@
 # SunnySpot Holidays
 ## Made For TAFE education
-Thomas Morgan, 880629289 student number
-I wanted to try making my own README text file, github tools were used to help create this file. 
+T.morgan
 This project has been created as part of TAFE CI_ServersideDatabase_AE_Pro2. 
 
 ## Project Overview

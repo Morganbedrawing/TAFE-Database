@@ -1,0 +1,79 @@
+--ThomasMorgan
+CREATE DATABASE SunnySpot;
+
+USE SunnySpot;
+
+
+
+-- Create cabin table
+CREATE TABLE cabin (
+    cabinID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    cabinType VARCHAR(150),
+    cabinDescription VARCHAR(255),
+    pricePerWeek INT(10),
+    photo VARCHAR(50)
+);
+
+-- Create admin table
+CREATE TABLE admin (
+    staffID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    password VARCHAR(50),
+    firstName VARCHAR(50),
+    lastName VARCHAR(50),
+    address1 VARCHAR(200),
+    address2 VARCHAR(200),
+    mobile VARCHAR(20)
+);
+
+-- Create inclusion table
+CREATE TABLE inclusion (
+    inclID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    inclDetails VARCHAR(255)
+);
+
+-- Create cabinInclusion table
+CREATE TABLE cabinInclusion (
+    cabinInclID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    cabinID BIGINT,
+    inclID BIGINT,
+    FOREIGN KEY (cabinID) REFERENCES cabin(cabinID),
+    FOREIGN KEY (inclID) REFERENCES inclusion(inclID)
+);
+
+-- Create log table
+CREATE TABLE log (
+    logID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    staffID BIGINT,
+    loginDateTime TIMESTAMP,
+    logoutDateTime TIMESTAMP,
+    FOREIGN KEY (staffID) REFERENCES admin(staffID)
+);
+
+
+--below is the trial tests (wrong) for 2 'test plan' refer to T2SQL for corrected.
+-- test id 1
+INSERT INTO cabin (cabin_ID, cabinDescription, pricePerNight, pricePerWeek, photo)
+VALUES ('test cabin 1', 'test cabin with valid data', 125, 625, 'insertCabin1.jpg');
+
+-- test id 2
+INSERT INTO cabin (cabin_ID, cabinDescription, pricePerNight, pricePerWeek, photo)
+VALUES ('test cabin 2', 'test cabin with invalid data', -552, 625, 'insertCabin1.jpg');
+
+-- test id 3
+INSERT INTO cabin (cabin_ID, cabinDescription, pricePerNight, pricePerWeek, photo)
+VALUES ('test cabin 3', 'test cabin with invalid data', 52, 625, 'insertCabin1.jpg');
+
+-- test id 4
+INSERT INTO cabin (cabin_ID, cabinDescription, pricePerNight, pricePerWeek, photo)
+VALUES ('test cabin 4', 'test cabin without an image', 100, 500, 'testCabin.jpg');
+
+-- test id 5
+UPDATE cabins
+SET cabin_name = 'update cabin 1', cabin_description = 'update cabin without', price_per_night = 100, price_per_week = 500
+WHERE cabin_name = 'test cabin 1';
+
+-- test id 6
+DELETE FROM cabins
+WHERE cabin_name = 'test cabin 4';
+
+

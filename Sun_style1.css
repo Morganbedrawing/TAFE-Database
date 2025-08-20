@@ -1,0 +1,270 @@
+* {
+margin: 0em;
+padding: 0em;
+font-size: 100%;
+border-style: none;
+list-style-type: none;
+}
+
+body {
+  font-family: helvetica, calibri, sans-serif;
+  background-color: #939393;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+	background-color: #283149;
+	width: 1170px;
+	margin: auto;
+	margin-top: 60px;
+}
+
+#inner-wrapper {
+	width: 1020px;
+	margin: auto;
+	padding-top: 60px;
+}
+	
+#topper {
+	display: flex;
+	justify-content: space-between;
+}
+ul { 
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  font-family: helvetica, calibri, sans-serif;
+  background-color: darkslategrey;
+  color: #fafafa;
+  margin: 0 10px;
+  padding: 2px;
+}
+nav ul li a { /*for the elements inside the anchor*/
+  text-decoration: none;
+  color: #000;  
+  padding: 10px 20px; 
+  border-radius: 5px;  
+  background-color: #f0f0f0; 
+}
+nav {
+  width: 440px; /* Adjust width for better layout and spacing in nav menu */
+  margin-top: 11px;
+    margin: 2px;
+  padding: 2px;
+}
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav a {
+	color: #fafafa;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #939393;
+}
+
+#current {
+	color: #bbcfe1;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}	
+
+h1 {
+	font-size: 23px;
+}
+
+p {
+	margin-top: 20px;
+	font-size: 17px;
+	line-height: 1.5em;
+}
+
+section ul {
+	margin-top: 20px;
+	line-height: 1.8em;
+}
+
+section a {
+	color: #b6ef1d;
+	text-decoration: none;
+}
+
+section a:hover {
+	text-decoration: underline;
+}
+
+footer ul {
+	width: 640px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	margin-top: 40px;
+	padding-bottom: 30px;
+}
+
+footer a {
+	color: #fafafa;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: 	#939393;
+}
+table{
+    background-color: oldlace;
+    color:#283149;
+}
+table, td, tr, th{
+    border: solid 1px #283149;
+}
+
+
+/* login related styling below */
+.login-page {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+.login-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.login-btn:hover {
+  background-color: #0056b3;
+}
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;           /* Allows menu to wrap on small screens */
+    gap: 18px;                 /* Adds space between menu items */
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    min-width: 160px;          /* Ensures each menu item is wide enough */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 12px 18px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;       /* Prevents text from wrapping inside button */
+}
+
+nav ul li a:hover {
+    background-color: #bbcfe1;
+    color: #283149;
+}
+
+/* Responsive: stack menu vertically on small screens */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    nav ul li {
+        min-width: 0;
+    }
+    nav ul li a {
+        font-size: 16px;
+        padding: 10px 8px;
+    }
+}
+
+.cabin-errors {
+    color: #d32f2f;
+    background: #fff3f3;
+    border: 1px solid #d32f2f;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    list-style: disc inside;
+}
+
+.cabin-success {
+    color: #388e3c;
+    background: #e8f5e9;
+    border: 1px solid #388e3c;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}

@@ -2,7 +2,8 @@
 ## Made For TAFE education
 T.morgan
 This project has been created as part of TAFE CI_ServersideDatabase_AE_Pro2. 
-
+## Github
+This project has had it's database details and connection left out and is no longer active. 
 ## Project Overview
 SunnySpot Holidays is a web application designed to provide information and management capabilities for various types of accommodations, including camping, caravans, and cabins. The application allows users to view available cabins, and administrators to manage cabin information through an administrative interface.
 
